@@ -121,9 +121,25 @@ const User = ({ navigation }) => {
   }, []);
 
   const updateUserData = async () => {
-    if (userData.phone.length !== 13) {
-      setError("Phone number should be 10 digits");
-      return;
+
+    if (!userData.phone.startsWith("+91")) {
+      setError("Check your mobile number with country code.");
+      addLog(errorMessage);
+      console.log(errorMessage);
+      return; 
+    }
+    if (userData.phone.length < 13) {
+      setError("Check the phone number. It should be 10 digits only");
+      addLog(errorMessage);
+      console.log(errorMessage);
+      return; 
+    }
+
+    if (userData.phone.length > 13) {
+      setError("Check the phone number. It should be 10 digits only.");
+      addLog(errorMessage);
+      console.log(errorMessage);
+      return; 
     }
 
     try {

@@ -235,7 +235,7 @@ const SingleProductPage = ({ navigation }) => {
 
           <View style={styles.deliveryInfoContainer}>
             {product.mrp && (
-              <Text style={styles.RealPrice}>${product.mrp}</Text>
+              <Text style={styles.RealPrice}> ₹{product.mrp}</Text>
             )}
             {product.freeDelivery && (
               <Text style={styles.deliveryInfoText}>Free Delivery</Text>

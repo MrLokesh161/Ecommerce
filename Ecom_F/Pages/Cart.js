@@ -524,8 +524,11 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   productName: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: "400",
+    flexWrap: "wrap",
+    width: "91%",
+    
   },
   productDetailoffcont: {
     backgroundColor: "#871818",
